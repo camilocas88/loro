@@ -1,0 +1,265 @@
+@keyframes fadein {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+@keyframes aparece-izquierda {
+  from {
+    transform: translateX(100%);
+    opacity: 0; }
+  to {
+    transform: translateX(0%);
+    opacity: 1; } }
+
+@font-face {
+  font-family: 'CenturyGothic';
+  src: url("../fonts/CenturyGothic.eot");
+  /* IE9 Compat Modes */
+  src: url("../fonts/CenturyGothic.woff") format("woff"), url("../fonts/CenturyGothic.ttf") format("truetype"), url("../fonts/CenturyGothic.svg") format("svg");
+  /* Legacy iOS */ }
+
+@font-face {
+  font-family: 'CenturyGothicBold';
+  src: url("../fonts/CenturyGothic-Bold.eot");
+  /* IE9 Compat Modes */
+  src: url("../fonts/CenturyGothic-Bold.woff") format("woff"), url("../fonts/CenturyGothic-Bold.ttf") format("truetype"), url("../fonts/CenturyGothic-Bold.svg") format("svg");
+  /* Legacy iOS */ }
+
+@font-face {
+  font-family: 'Roboto-Regular';
+  src: url("../fonts/Roboto-Regular.eot");
+  /* IE9 Compat Modes */
+  src: url("../fonts/Roboto-Regular.woff") format("woff"), url("../fonts/Roboto-Regular.ttf") format("truetype"), url("../fonts/Roboto-Regular.svg") format("svg");
+  /* Legacy iOS */ }
+
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; }
+
+.container {
+  background-image: url("../img/Background-1.png");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  padding: 0 50px; }
+
+.header {
+  max-width: 200px;
+  padding: 30px 0; }
+
+@media only screen and (max-width: 1000px) {
+  .main-content {
+    flex-wrap: wrap; }
+  .main-content__table2 {
+    flex-wrap: wrap;
+    display: block; } }
+
+.main-content {
+  display: flex;
+  position: relative; }
+  .main-content__table1 {
+    width: 50%;
+    height: 72vh;
+    display: flex;
+    flex-wrap: wrap; }
+    .main-content__table1 .title {
+      color: #00c196;
+      font-size: 20px;
+      font-family: 'CenturyGothicBold'; }
+    .main-content__table1 .sub-content {
+      color: #636363;
+      font-family: 'CenturyGothic';
+      font-size: 15px;
+      letter-spacing: 1px; }
+    .main-content__table1 .count {
+      display: flex;
+      align-items: center; }
+      .main-content__table1 .count .count-numbers {
+        background: #f6a432;
+        font-family: 'CenturyGothicBold';
+        width: 40px;
+        height: 55px;
+        color: white;
+        border-radius: 10px;
+        text-align: center;
+        vertical-align: center;
+        font-size: 45px;
+        margin: 5px 3px; }
+        .main-content__table1 .count .count-numbers--center {
+          margin-left: 10px; }
+    .main-content__table1 .count > span {
+      color: #00c196;
+      font-size: 40px;
+      font-family: 'CenturyGothicBold'; }
+    .main-content__table1 a {
+      text-decoration: none; }
+    .main-content__table1 .links {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-end;
+      width: 100%; }
+      .main-content__table1 .links .link img {
+        width: 30px;
+        height: 30px; }
+      .main-content__table1 .links .box {
+        height: 10px;
+        width: 100px;
+        display: flex;
+        justify-content: space-around;
+        margin-left: auto; }
+      .main-content__table1 .links .page p {
+        color: white;
+        font-family: 'CenturyGothicBold';
+        margin: 0;
+        font-size: 12px;
+        text-align: center; }
+      .main-content__table1 .links .page img {
+        width: 70px; }
+  .main-content__table2 {
+    width: 50%;
+    display: flex; }
+    .main-content__table2--img {
+      height: 260px;
+      width: 220px;
+      position: relative; }
+      .main-content__table2--img .phone img {
+        position: absolute;
+        height: 100%;
+        width: 170px;
+        top: 50px;
+        left: 16px;
+        z-index: 1; }
+      .main-content__table2--img .illumination img {
+        position: absolute;
+        min-height: 496px;
+        max-width: 250px;
+        top: -104px;
+        right: -85px;
+        z-index: 1;
+        animation: fadein 2s; }
+      .main-content__table2--img .floor img {
+        position: absolute;
+        width: 512px;
+        bottom: -132px;
+        left: 27px; }
+    .main-content__table2 .form {
+      background: white;
+      width: 300px;
+      height: 190px;
+      padding: 8px 2px 15px 10px;
+      margin-top: 60px;
+      border-radius: 12px;
+      position: relative;
+      animation: fadein 3s; }
+      .main-content__table2 .form__title {
+        color: #00c196;
+        text-align: center;
+        font-family: 'CenturyGothicBold'; }
+        .main-content__table2 .form__title h2 {
+          margin-top: 0;
+          margin-bottom: 8px; }
+      .main-content__table2 .form__terms {
+        text-align: center; }
+        .main-content__table2 .form__terms a {
+          color: #00c196;
+          font-family: 'CenturyGothic';
+          font-size: 10px;
+          text-align: center;
+          justify-content: center; }
+      .main-content__table2 .form__fields {
+        display: flex;
+        flex-wrap: wrap; }
+        .main-content__table2 .form__fields .name {
+          display: flex; }
+          .main-content__table2 .form__fields .name input {
+            width: 79%;
+            flex-wrap: nowrap !important; }
+            .main-content__table2 .form__fields .name input:nth-last-of-type(1) {
+              margin-left: 2px; }
+        .main-content__table2 .form__fields input {
+          background: #e8e8e8;
+          border: none;
+          border-radius: 6px;
+          padding: 6px;
+          margin-bottom: 12px;
+          width: 100%; }
+        .main-content__table2 .form__fields .contact {
+          width: 90%; }
+      .main-content__table2 .form .submit {
+        display: block;
+        position: absolute;
+        bottom: -12px; }
+        .main-content__table2 .form .submit input {
+          border: none;
+          background: #f6a432;
+          font-family: 'CenturyGothic';
+          color: white;
+          border-radius: 20px;
+          padding: 10px 30px;
+          margin-left: 35%;
+          margin-right: 10%; }
+
+.container2 {
+  background-image: url(../img/Background-2.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  overflow-y: hidden; }
+  .container2__appLoro {
+    width: 600px; }
+    .container2__appLoro .phoneLoro img {
+      max-width: 620px; }
+  .container2__description {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 650px;
+    max-width: 650px; }
+    .container2__description--descriptionTitle {
+      color: #00c196;
+      font-size: 1.3rem;
+      line-height: 0.9;
+      font-family: 'CenturyGothicBold'; }
+    .container2__description--list {
+      box-sizing: content-box; }
+      .container2__description--list ul {
+        list-style: none;
+        padding: 0; }
+      .container2__description--list li:before {
+        content: "";
+        display: inline-block;
+        height: 15px;
+        width: 15px;
+        margin-right: 10px;
+        background-image: url(../img/check.svg);
+        animation: fadein 4s; }
+        .container2__description--list li:before:nth-of-type(1) {
+          animation: fadein 4s; }
+        .container2__description--list li:before:nth-of-type(2) {
+          animation: fadein 5s; }
+        .container2__description--list li:before:nth-of-type(3) {
+          animation: fadein 7 s; }
+      .container2__description--list li {
+        color: #636363;
+        font-size: 1rem;
+        line-height: 2;
+        letter-spacing: 0.5px;
+        font-family: 'Roboto-Regular'; }
+        .container2__description--list li:nth-of-type(1) {
+          animation: aparece-izquierda ease 3s backwards; }
+        .container2__description--list li:nth-of-type(2) {
+          animation: aparece-izquierda ease 4s backwards; }
+        .container2__description--list li:nth-of-type(3) {
+          animation: aparece-izquierda ease 5s backwards; }
+
+@media only screen and (max-width: 1000px) {
+  .illumination {
+    display: none; } }

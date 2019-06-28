@@ -1,0 +1,344 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    
+
+}
+
+.container{
+   background-image: url('../img/Background-1.png');
+   background-size: cover; 
+   background-position: center;
+   height: 100vh;
+   padding: 0 50px;
+
+}
+
+.header{
+    max-width: 200px;
+    padding: 30px 0;
+}
+
+@media only screen and (max-width: 1000px) {
+    .main-content {
+      flex-wrap: wrap;
+    }
+    .main-content__table2{
+      flex-wrap: wrap;
+      display: block;
+        
+    }
+}
+
+.main-content{
+    display: flex;
+    position: relative;
+
+    
+
+    &__table1{
+        width: 50%;
+        height: 72vh;
+        display: flex;
+        flex-wrap: wrap;
+
+        .title{
+            color: $color-green;
+            font-size: 20px;
+            font-family: 'CenturyGothicBold';
+        }
+        .sub-content{
+            color:$color-grey;
+            font-family: 'CenturyGothic';
+            font-size: 15px;
+            letter-spacing: 1px;
+        }
+
+        .count {
+            display: flex;
+            align-items: center;
+
+            .count-numbers{
+                background: $color-yellow;
+                font-family: 'CenturyGothicBold';
+                width: 40px;
+                height: 55px;
+                color: white;
+                border-radius: 10px;
+                text-align: center;
+                vertical-align: center;
+                font-size: 45px;
+                margin: 5px 3px;
+
+                &--center{
+                    margin-left: 10px;
+                }
+            }           
+        }
+
+        .count > span {
+            color: $color-green;
+            font-size: 40px;
+            font-family: 'CenturyGothicBold';
+
+        }
+        
+
+        a{
+            text-decoration: none;
+        }
+        
+        .links {
+            display: flex;
+            flex-direction: row;
+            // margin-top: 180px;
+            justify-content: space-between;
+            align-items: flex-end;
+            width: 100%;
+
+            .link{
+               img{
+                    width: 30px;
+                    height: 30px;
+                }
+            }
+
+            .box {
+                height: 10px;
+                width: 100px;
+                display: flex;
+                justify-content: space-around; 
+                margin-left: auto;
+            }
+            .page{
+                p{
+                    color: white;
+                    font-family: 'CenturyGothicBold';
+                    margin: 0;
+                    font-size: 12px;
+                    text-align: center;
+
+                }
+                img{
+                    width: 70px;
+                }
+            }
+        }
+
+
+
+    }
+
+    &__table2{
+        width: 50%;
+        display: flex;
+
+        &--img{
+            // background: red;
+            height: 260px;
+            width: 220px;
+            position: relative;
+
+            
+
+            .phone img{
+                position: absolute;
+                height: 100%;
+                width: 170px;
+                top: 50px;
+                left: 16px;
+                z-index: 1;
+
+            }
+            .illumination img {
+                position: absolute;
+                min-height: 496px;
+                max-width: 250px;
+                top: -104px;
+                right: -85px;
+                z-index: 1;
+                animation: fadein 2s;
+            }
+
+            .floor img {
+                position: absolute;
+                width: 512px;
+                bottom: -132px;
+                left: 27px;
+            }
+        }
+
+        .form{
+            background: white;
+            width: 300px;
+            height: 190px;
+            padding: 8px 2px 15px 10px;
+            margin-top: 60px;
+            border-radius: 12px;
+            position: relative;
+            animation: fadein 3s;
+
+            &__title{
+                color: $color-green;
+                text-align: center;
+                font-family: 'CenturyGothicBold';
+
+                h2{
+                    margin-top: 0;
+                    margin-bottom: 8px;
+                }
+            }
+            &__terms{
+                text-align: center;
+                a{
+                    color: $color-green;
+                    font-family: 'CenturyGothic';
+                    font-size: 10px;
+                    text-align: center;
+                    justify-content: center;
+                }
+            }
+
+            &__fields {
+                display: flex;
+                flex-wrap: wrap;
+                
+                .name{
+                    display: flex;
+                    
+                    input{
+                        width: 79%;
+                        flex-wrap: nowrap !important;
+                        &:nth-last-of-type(1){
+                            margin-left: 2px;
+                        }                        
+                    }
+                }
+
+                input{
+                    background: $color-fields;
+                    border: none;
+                    border-radius: 6px;
+                    padding: 6px;
+                    margin-bottom: 12px;
+                    width: 100%;
+                }
+                .contact{
+                    width: 90%
+                }
+            }
+            .submit {
+                display:block;
+                position: absolute;
+                bottom: -12px; 
+
+                input{
+                    border: none;
+                    background: $color-yellow; 
+                    font-family: 'CenturyGothic';
+                    color: white;
+                    border-radius: 20px;
+                    padding: 10px 30px;
+                    margin-left: 35%;
+                    margin-right: 10%;                    
+                 }
+            }
+        }
+    }
+}
+
+.container2{
+    background-image: url(../img/Background-2.png);
+    background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    // justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    overflow-y: hidden;
+
+    &__appLoro {
+        // background: yellow;
+        width: 600px;
+
+        .phoneLoro{
+            img{
+                max-width: 620px;
+               
+            }
+        }
+    }
+    &__description{
+        display: flex;
+        // align-self: flex-start;
+        // background: red;
+        flex-wrap: wrap;
+        max-width: 650px;    max-width: 650px;
+        
+
+        &--descriptionTitle{
+            color: $color-green;
+            font-size: 1.3rem;
+            line-height: 0.9;
+            font-family: 'CenturyGothicBold';
+        }
+        &--list{
+            box-sizing: content-box;
+            ul {               
+               list-style: none;  
+               padding: 0;                   
+              } 
+            li:before{
+                content: "";
+                display: inline-block;
+                height: 15px;
+                width: 15px;
+                margin-right: 10px;
+                background-image: url(../img/check.svg);
+                animation: fadein 4s;
+
+                &:nth-of-type(1){
+                    animation: fadein 4s;
+                }
+                &:nth-of-type(2){
+                    animation: fadein 5s;
+                }
+                &:nth-of-type(3){
+                    animation: fadein 7 s;
+                }
+            }
+            li{
+                color: $color-grey;
+                font-size: 1rem;
+                line-height: 2;
+                letter-spacing: 0.5px;
+                font-family: 'Roboto-Regular';
+
+                &:nth-of-type(1){
+                    animation: aparece-izquierda ease 3s backwards;
+                }
+                &:nth-of-type(2){
+                    animation: aparece-izquierda ease 4s backwards;
+                }
+                &:nth-of-type(3){
+                    animation: aparece-izquierda ease 5s backwards;
+                }
+
+            }
+        }
+
+
+        
+    }
+    
+}
+@media only screen and (max-width: 1000px) {
+    .illumination {
+      display: none;
+    }
+}
