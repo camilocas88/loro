@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,31 +8,35 @@
     <link rel="stylesheet" href="css/main.css">
     <title>Landing Loro</title>
 </head>
+
 <body>
-   <div class="container">
+    <div class="container">
         <header class="header">
             <img src="img/Logo.svg" alt="">
         </header>
         <div class="main-content">
             <div class="main-content__table1">
                 <div class="title">
-                    <h1>¡Estamos boadsdados!</h1>
+                    <h1>¡Estamos botados!</h1>
                 </div>
                 <div class="sub-content">
-                    <p>Por nuestro lanzamiento sortearemos el valor que <br>ustedes logren alcanzar, cada persona suma.</p>
+                    <p>Por nuestro lanzamiento sortearemos el valor que <br>ustedes logren alcanzar, cada persona suma.
+                    </p>
                     <p>Compártelo y veamos hasta donde podemos llegar...</p>
                 </div>
 
                 <div class="count">
-                    <span>$</span> <div class="count-numbers">0</div><div class="count-numbers">0</div>
+                    <span>$</span>
+                    <div class="count-numbers">0</div>
+                    <div class="count-numbers">0</div>
                     <div class="count-numbers count-numbers--center">1</div>
                     <div class="count-numbers count-numbers">0</div>
                     <div class="count-numbers count-numbers">0</div>
                     <div class="count-numbers count-numbers--center">0</div>
                     <div class="count-numbers count-numbers">0</div>
-                    <div class="count-numbers count-numbers">0</div>
+                    <div class="count-numbers count-numbers"><span id="count">0</span></div>
                 </div>
-                
+
                 <div class="links">
                     <div class="link">
                         <a href="#"><img src="img/link.png" alt=""></a>
@@ -40,11 +45,11 @@
                         <div class="page">
                             <p>Ver más</p>
                             <img src="img/row.svg" alt="">
-                        </div> 
-                    </a> 
+                        </div>
+                    </a>
                 </div>
 
-            </div> i
+            </div> 
             <div class="main-content__table2">
                 <div class="main-content__table2--img">
                     <div class="phone">
@@ -54,33 +59,30 @@
                         <img src="img/iluumination.png" alt="">
                     </div>
                     <div class="floor">
-                        <img s  rc="img/floor.png" alt="">
+                        <img s rc="img/floor.png" alt="">
                     </div>
-                    <!-- <div id="anim_container">
-
-                    </div> -->
                 </div>
-                
+
                 <div class="form">
                     <form action="">
                         <div class="form__title">
                             <h2>Regístrate</h2>
                         </div>
                         <div class="form__fields">
-                           <div class="name">
+                            <div class="name">
                                 <div>
-                                    <input type="text" name="name" placeholder="Nombre" >
+                                    <input type="text" name="name" placeholder="Nombre">
                                 </div>
                                 <div>
-                                    <input type="text" name="lastName" placeholder="Apellido" >
+                                    <input type="text" name="lastName" placeholder="Apellido">
                                 </div>
-                           </div>
-                           <div class="contact">
-                            <input class="mobile" type="text" name="Mobile" placeholder="Celular" >
-                           </div>
-                           <div class="contact">
-                            <input class="mobile" type="email" name="mail" placeholder="Correo electrónico" >
-                           </div>
+                            </div>
+                            <div class="contact">
+                                <input class="mobile" type="text" name="Mobile" placeholder="Celular">
+                            </div>
+                            <div class="contact">
+                                <input class="mobile" type="email" name="mail" placeholder="Correo electrónico">
+                            </div>
                         </div>
                         <div class="form__terms">
                             <a href="#">Aplican términos y condiciones </a>
@@ -88,22 +90,22 @@
                         <div class="submit">
                             <input type="submit" value="¡Quiero ganar!" id="form_button" />
                         </div>
-                    </form>    
+                    </form>
                 </div>
-            
-            </div> 
+
+            </div>
         </div>
-   </div>
-   <div class="container2" id="page-2">
-       <div class="container2__appLoro">
-           <div class="phoneLoro">
-              <img src="img/appLoro.png" alt="">
-           </div>
-       </div>
-       <div class="container2__description">
-           <div class="container2__description--descriptionTitle">
+    </div>
+    <div class="container2" id="page-2">
+        <div class="container2__appLoro">
+            <div class="phoneLoro">
+                <img src="img/appLoro.png" alt="">
+            </div>
+        </div>
+        <div class="container2__description">
+            <div class="container2__description--descriptionTitle">
                 <h2>Sé el #1 en conocer <br>la red social de compras <br>más grande de Colombia</h2>
-           </div>            
+            </div>
             <div class="container2__description--list">
                 <ul>
                     <li>Te conectaremos con los C.C más cercanos.</li>
@@ -111,8 +113,35 @@
                     <li>Y lo mejor, llegaremos a ti en tiempo récord.</li>
                 </ul>
             </div>
-       </div>
-   </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous">
+    </script>
+    <script>
+        // sroll
+        $(document).ready(function () {
+            $('a[href^="#"]').click(function () {
+                var destino = $(this.hash);
+                if (destino.length == 0) {
+                    destino = $('a[name="' + this.hash.substr(1) + '"]');
+                }
+                if (destino.length == 0) {
+                    destino = $('html');
+                }
+                $('html, body').animate({ scrollTop: destino.offset().top }, 1000);
+                return false;
+            });
+        });
+
+        // moveImg
+        $('html').mousemove(function (e) {
+            var x = e.pageX,
+                y = e.pageY;
+            $('.phoneLoro').css('transform', 'translate(' + x / -50 + 'px, ' + y / -50 + 'px)');
+        });
+    </script>
 
 </body>
 

@@ -6,6 +6,11 @@ body, html {
 
 }
 
+// html {
+//     scroll-behavior: smooth;
+// }
+  
+
 .container{
    background-image: url('../img/Background-1.png');
    background-size: cover; 
@@ -157,8 +162,8 @@ body, html {
                 max-width: 250px;
                 top: -104px;
                 right: -85px;
-                z-index: 1;
-                animation: fadein 2s;
+                z-index: 0;
+                animation: fadein 6s;
             }
 
             .floor img {
@@ -171,13 +176,14 @@ body, html {
 
         .form{
             background: white;
-            width: 300px;
-            height: 190px;
+            width: 230px;
+            height: 150px;
             padding: 8px 2px 15px 10px;
             margin-top: 60px;
             border-radius: 12px;
             position: relative;
-            animation: fadein 3s;
+            animation: fadein 10s;
+            z-index: 10000;
 
             &__title{
                 color: $color-green;
@@ -186,17 +192,22 @@ body, html {
 
                 h2{
                     margin-top: 0;
-                    margin-bottom: 8px;
+                    margin-bottom: 4px;
                 }
             }
             &__terms{
-                text-align: center;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 6px;
                 a{
                     color: $color-green;
                     font-family: 'CenturyGothic';
-                    font-size: 10px;
                     text-align: center;
                     justify-content: center;
+                    font-size: 7px;
+                    line-height: 2;
+                    text-decoration: none;
                 }
             }
 
@@ -204,14 +215,20 @@ body, html {
                 display: flex;
                 flex-wrap: wrap;
                 
+                input::placeholder{
+                    font-size: 10px
+                }
+                
                 .name{
                     display: flex;
                     
                     input{
                         width: 79%;
                         flex-wrap: nowrap !important;
-                        &:nth-last-of-type(1){
-                            margin-left: 2px;
+                        font-size: 10px;
+                        margin-block: 3px;
+                        &:nth-last-of-type(2){
+                            margin-left: 0px;
                         }                        
                     }
                 }
@@ -221,27 +238,31 @@ body, html {
                     border: none;
                     border-radius: 6px;
                     padding: 6px;
-                    margin-bottom: 12px;
+                    // margin-bottom: 12px;
                     width: 100%;
+                    font-size: 10px;
+
                 }
                 .contact{
                     width: 90%
                 }
             }
             .submit {
-                display:block;
-                position: absolute;
-                bottom: -12px; 
+                position: relative;
 
                 input{
+                    position: absolute;
                     border: none;
                     background: $color-yellow; 
                     font-family: 'CenturyGothic';
                     color: white;
                     border-radius: 20px;
-                    padding: 10px 30px;
-                    margin-left: 35%;
-                    margin-right: 10%;                    
+                    padding: 8px 9px;
+                    width: 115px;
+                    left: 0;
+                    right: 0;
+                    margin: auto;
+                                        
                  }
             }
         }
